@@ -34,18 +34,20 @@ py-agent/
 - py-agent 用 `python-dotenv` 读取 `py-agent/.env`
 
 ### 首次运行引导
-**检测条件：当前项目 memory 中不存在 `project_pyagent_progress.md`**
+**检测条件：系统上下文中 memory 目录内不存在 `project_pyagent_progress.md`**
+
+> **重要**：memory 目录是 Claude Code 系统自动提供的持久化目录（路径类似 `~/.claude/projects/[编码路径]/memory/`），在每次对话开始的系统提示中会告知确切路径。**绝对不要**在项目工程目录下创建 `memory/` 文件夹。
 
 触发后执行以下步骤（**按顺序，不可跳过**）：
 
 1. 读取项目根目录的 `CURRICULUM.md`，从中解析 26 个里程碑的名称、要点、验收标准
-2. 在当前项目 memory 目录创建 `project_pyagent_progress.md`，内容格式参照进度文件模板：M1 状态为 ✅ 完成（已预置实现），其余里程碑状态为 ⬚ 待开始，当前里程碑为 M2
-3. 同时创建 `MEMORY.md` 索引，指向该进度文件
+2. 在 **Claude Code 提供的 memory 目录**（系统提示中的路径）创建 `project_pyagent_progress.md`，内容格式参照进度文件模板：M1 状态为 ✅ 完成（已预置实现），其余里程碑状态为 ⬚ 待开始，当前里程碑为 M2
+3. 在同一 memory 目录创建 `MEMORY.md` 索引，指向该进度文件
 4. **将 `CURRICULUM.md` 移动到 `.archive/CURRICULUM.md`**（已写入 memory，移入隐藏目录归档）
-5. **直接开始 M1。**
+5. **直接开始 M2。**
 
 ### Claude 的工作方式（每次会话）
-1. 读取当前项目 memory 中的 `project_pyagent_progress.md`，了解当前里程碑和进度
+1. 读取 **Claude Code memory 目录**中的 `project_pyagent_progress.md`，了解当前里程碑和进度
 2. 帮用户理解概念，用户自己写代码
 3. 生成给用户写代码的文件时：以当前最新里程碑文件为起点完整复制，再在此基础上添加新功能；所有 UI 代码（`class S`、`make_spinner`、`_prompt`、`_print_banner`、`_fmt_tool_input`、`_fmt_result_summary`）原样保留，不得重新设计；生成后立即 `uv run` 验证无报错
    - 文件头部（/// script 块之后）先用 3-5 行注释说清楚：上一个里程碑的局限是什么、这个里程碑解决什么问题、核心思路是什么；然后再列完成后能做到的事情
