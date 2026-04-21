@@ -47,7 +47,7 @@ py-agent/
 ### Claude 的工作方式（每次会话）
 1. 读取当前项目 memory 中的 `project_pyagent_progress.md`，了解当前里程碑和进度
 2. 帮用户理解概念，用户自己写代码
-3. 生成给用户写代码的文件时：以 `py-agent/milestone_base.py` 为起点完整复制，再在此基础上添加新功能；所有 UI 代码（class S、spinner、_prompt、_print_banner）不得修改；生成后立即 `uv run` 验证无报错
+3. 生成给用户写代码的文件时：以当前最新里程碑文件为起点完整复制，再在此基础上添加新功能；所有 UI 代码（`class S`、`make_spinner`、`_prompt`、`_print_banner`、`_fmt_tool_input`、`_fmt_result_summary`）原样保留，不得重新设计；生成后立即 `uv run` 验证无报错
    - 文件头部（/// script 块之后）先用 3-5 行注释说清楚：上一个里程碑的局限是什么、这个里程碑解决什么问题、核心思路是什么；然后再列完成后能做到的事情
    - TODO 注释风格：每个步骤说明后面留一行空注释 `#    TODO: （下面写你的代码）`，让用户可以用编辑器搜索 `TODO` 快速定位所有待填位置
    - TODO 详细程度：涉及陌生库的 API（方法名、参数格式不直觉）→ 直接在注释里写出可运行的代码行；熟悉的 Python 模式（if/else、try/except、字符串拼接）→ 只写一句话描述意图，不写代码
