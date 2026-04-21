@@ -1,0 +1,212 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "M1: 流式对话",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m1_hello.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M2: 多轮 REPL",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m2_repl.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M3: 工具 + Agentic Loop",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m3_loop.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M4: 文件工具扩展",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m4_tools.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M5: Edit 工具",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m5_edit.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M6: Bash 工具 + 权限系统",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m6_bash.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M7: 会话持久化",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m7_session.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M8: 上下文压缩",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m8_compact.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M9: 配置加载",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m9_config.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M10: Slash 命令 + Token 追踪",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m10_slash.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M11: Hook 系统",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m11_hooks.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M12: MCP 工具接入",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m12_mcp.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M13: 并行工具调用",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m13_parallel.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M14: Git 上下文注入",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m14_git_context.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M15: 动态 System Prompt",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m15_dynamic_prompt.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M16: Bash 安全验证",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m16_bash_validation.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M17: Agentic Loop 进化",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m17_loop.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M18: Extended Thinking",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m18_thinking.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M19: Sub-agent 派发",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m19_subagent.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M20: 错误恢复",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m20_recovery.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M21: Sandbox 执行",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m21_sandbox.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M22: WebFetch + WebSearch",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m22_webfetch.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    },
+    {
+      "name": "M23: Plan Mode",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py-agent/milestones/m23_planmode.py",
+      "python": "${workspaceFolder}/py-agent/.venv/bin/python",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/py-agent"
+    }
+  ]
+}

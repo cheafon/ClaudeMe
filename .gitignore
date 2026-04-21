@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+
+# 学员的作业文件（各自 track 自己的进度）
+py-agent/milestones/*.py
+
+# 本地配置
+py-agent/.env
+py-agent/.venv/
+py-agent/.fan/
+py-agent/uv.lock
+
+# Claude Code 本地产物
+.claude/settings.local.json
+.claude/sessions/
+
+# 系统文件
+.DS_Store
