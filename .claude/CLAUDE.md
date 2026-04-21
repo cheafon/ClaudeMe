@@ -33,6 +33,9 @@ py-agent/
 - 配置在 `py-agent/.env` 中，参考 `py-agent/.env.example`
 - py-agent 用 `python-dotenv` 读取 `py-agent/.env`
 
+### 课程大纲
+完整里程碑列表见 `CURRICULUM.md`（26 个里程碑，从流式对话到 Memory 读写）。
+
 ### 首次运行引导
 **如果当前项目 memory 中不存在 `project_pyagent_progress.md`：**
 1. 自动在当前项目 memory 目录创建该文件（使用 `memory/project_pyagent_progress.md` 的模板内容，所有里程碑初始状态为 ⬚ 待开始，M1 为当前里程碑）
