@@ -33,14 +33,16 @@ py-agent/
 - 配置在 `py-agent/.env` 中，参考 `py-agent/.env.example`
 - py-agent 用 `python-dotenv` 读取 `py-agent/.env`
 
-### 课程大纲
-完整里程碑列表见 `CURRICULUM.md`（26 个里程碑，从流式对话到 Memory 读写）。
-
 ### 首次运行引导
-**如果当前项目 memory 中不存在 `project_pyagent_progress.md`：**
-1. 自动在当前项目 memory 目录创建该文件（使用 `memory/project_pyagent_progress.md` 的模板内容，所有里程碑初始状态为 ⬚ 待开始，M1 为当前里程碑）
-2. 询问用户是否直接开始 M1，还是先了解项目结构
-3. 用户确认后，生成 M1 脚手架
+**检测条件：当前项目 memory 中不存在 `project_pyagent_progress.md`**
+
+触发后执行以下步骤（**按顺序，不可跳过**）：
+
+1. 读取项目根目录的 `CURRICULUM.md`，从中解析 26 个里程碑的名称、要点、验收标准
+2. 在当前项目 memory 目录创建 `project_pyagent_progress.md`，内容格式参照进度文件模板：所有里程碑状态为 ⬚ 待开始，当前里程碑为 M1
+3. 同时创建 `MEMORY.md` 索引，指向该进度文件
+4. **删除 `CURRICULUM.md`**（已写入 memory，不再需要）
+5. 询问用户是否直接开始 M1，还是先了解项目结构
 
 ### Claude 的工作方式（每次会话）
 1. 读取当前项目 memory 中的 `project_pyagent_progress.md`，了解当前里程碑和进度
