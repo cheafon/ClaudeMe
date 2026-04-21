@@ -11,7 +11,12 @@
 # 验收：cd py-agent && uv run milestones/m1_hello.py
 
 import os
+import sys
 from pathlib import Path
+
+# Windows 默认 GBK 编码，强制改为 UTF-8，避免中文/emoji 输出报错
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
 
 from dotenv import load_dotenv
 import anthropic
