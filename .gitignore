@@ -18,7 +18,3 @@ py-agent/uv.lock
 
 # 系统文件
 .DS_Store
-
-# 引导文件（初始化完成后会被自动删除，删除后 git 不需要追踪）
-# 注意：初次 clone 时此文件存在，Claude 读取后会删除它
-# CURRICULUM.md
