@@ -3,6 +3,8 @@ __pycache__/
 
 # 学员的作业文件（各自 track 自己的进度）
 py-agent/milestones/*.py
+# M1 是预置的参考实现，不忽略
+!py-agent/milestones/m1_hello.py
 
 # 本地配置
 py-agent/.env
