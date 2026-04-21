@@ -41,7 +41,7 @@ py-agent/
 1. 读取项目根目录的 `CURRICULUM.md`，从中解析 26 个里程碑的名称、要点、验收标准
 2. 在当前项目 memory 目录创建 `project_pyagent_progress.md`，内容格式参照进度文件模板：M1 状态为 ✅ 完成（已预置实现），其余里程碑状态为 ⬚ 待开始，当前里程碑为 M2
 3. 同时创建 `MEMORY.md` 索引，指向该进度文件
-4. **删除 `CURRICULUM.md`**（已写入 memory，不再需要）
+4. **将 `CURRICULUM.md` 移动到 `.archive/CURRICULUM.md`**（已写入 memory，移入隐藏目录归档）
 5. **直接开始 M1。**
 
 ### Claude 的工作方式（每次会话）
